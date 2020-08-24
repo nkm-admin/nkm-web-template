@@ -1,0 +1,224 @@
+/* theme color */
+$--color-primary: $color-theme;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+$--color-success: $color-success;
+$--color-warning: $color-warning;
+$--color-danger: $color-error;
+// $--color-info: $color-info;
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-card,
+.el-dropdown,
+.el-table,
+.el-breadcrumb__inner,
+.el-form-item__label,
+.el-dialog__title,
+.el-select-dropdown__item {
+  color: var(--color-text) !important;
+}
+
+.el-dialog,
+.el-loading-mask,
+.el-card,
+.el-tree,
+.el-input__inner,
+.el-submenu.is-active > .el-submenu__title,
+.el-menu-item.is-active,
+.el-menu-item:hover,
+.el-menu-item:focus,
+.el-submenu__title:hover,
+.el-table--enable-row-hover .el-table__body tr:hover > td,
+.el-select-dropdown,
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover,
+.el-textarea__inner {
+  background-color: var(--color-background-content) !important;
+}
+
+.el-dialog__wrapper .el-dialog__header,
+.el-textarea__inner,
+.el-card,
+.el-card .el-card__header {
+  border-color: var(--color-border) !important;
+}
+
+.el-tree {
+  .el-tree-node.is-current > .el-tree-node__content,
+  .el-tree-node__content:hover {
+    background-color: var(--color-background) !important;
+  }
+}
+
+.el-input__inner {
+  border-color: var(--color-border);
+  color: var(--content-color);
+
+  &:hover {
+    border-color: var(--color-theme);
+  }
+}
+
+.el-input-group__append,
+.el-input-group__prepend {
+  background-color: var(--color-input-bg) !important;
+  border-color: var(--color-border);
+}
+
+// 菜单
+.el-menu {
+  background-color: var(--color-background-content);
+
+  .title,
+  [class^="el-icon-"],
+  [class^="x-icon-"] {
+    color: var(--color-text);
+  }
+
+  .is-active {
+    > .title {
+      color: inherit;
+    }
+  }
+}
+.el-submenu [class^="el-icon-"],
+.el-submenu [class^="x-icon-"] {
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  font-size: 18px;
+}
+.el-menu--vertical {
+  .el-menu {
+    background-color: var(--color-background);
+  }
+}
+
+// 卡片组件
+.el-card {
+  .el-card__header {
+    padding: 15px 20px;
+    font-size: $font-size-large;
+  }
+}
+
+// 表格
+.el-table--group::after,
+.el-table--border::after,
+.el-table::before {
+  background-color: var(--color-border);
+}
+.el-table,
+.el-table tr,
+.el-table th {
+  background-color: inherit;
+}
+
+.el-table,
+.el-table tr,
+.el-table th,
+.el-table td {
+  border-color: var(--color-border) !important;
+}
+
+// 消息提示组件
+.el-message {
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background: #fff;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+
+  &.el-message--info {
+    .el-icon-info {
+      color: $color-info;
+    }
+  }
+
+  .el-message__content {
+    color: $color-sub-text;
+  }
+}
+
+.el-button {
+  font-weight: normal;
+
+  &.el-button--primary {
+    background-color: #ecf5ff;
+    border-color: #d9ecff;
+    color: #409eff;
+  }
+
+  &.el-button--success {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    color: #67c23a;
+  }
+
+  &.el-button--warning {
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+    color: #e6a23c;
+  }
+
+  &.el-button--danger {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: #f56c6c;
+  }
+}
+
+.el-dialog__wrapper {
+  .el-dialog {
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    max-height: 90%;
+    margin: 0 !important;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+  }
+
+  .el-dialog__header {
+    border-bottom: 1px solid $color-border;
+  }
+
+  .el-dialog__footer {
+    border-top: 1px solid $color-border;
+  }
+
+  .el-dialog__body {
+    overflow-y: scroll;
+  }
+}
+
+.el-select-dropdown {
+  border-color: var(--color-border);
+}
+
+.el-popper[x-placement^="bottom"] .popper__arrow::after,
+.el-popper[x-placement^="bottom"] .popper__arrow {
+  border-bottom-color: var(--color-border);
+}
+.el-dropdown-menu {
+  background-color: var(--color-background-content);
+  border-color: var(--color-border);
+  .el-dropdown-menu__item {
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+  .el-dropdown-menu__item--divided:before {
+    background-color: var(--color-background-content);
+  }
+  .el-dropdown-menu__item:not(.is-disabled):hover,
+  .el-dropdown-menu__item:focus {
+    background-color: var(--color-background);
+  }
+}

@@ -1,0 +1,75 @@
+// 文字大小
+$font-size-small: 12px !default;
+$font-size-base: 14px !default;
+$font-size-large: 16px !default;
+
+// 颜色
+$color-theme: #1890ff;
+
+$color-text: #262728;
+$color-sub-text: #8B8C8D;
+$color-background: #f0f2f5;
+$color-background-content: #fff;
+$color-input-bg: $color-background-content;
+$color-border: #e8e8e8;
+$color-disabled: #c5c8ce;
+$color-toast-bg: rgba(255, 255, 255, .6);
+
+$color-text-dark: #D0D1D2;
+$color-sub-text-dark: #6D6E6F;
+$color-background-dark: #101112;
+$color-background-content-dark: #18191A;
+$color-input-bg-dark: $color-background-content-dark;
+$color-border-dark: #2B2C2D;
+$color-disabled-dark: #c5c8ce;
+$color-toast-bg-dark: rgba(0, 0, 0, .6);
+
+$color-success: #52c41a;
+$color-warning: #faad14;
+$color-error: #f5222d;
+$color-info: #1890ff;
+
+$border-radius: 5px;
+
+$box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+
+$content-padding: 20px;
+
+// 单行文字显示省略号
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 修改input placeholder颜色
+@mixin placeholderColor($color: #fff) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+}
+
+// 多行文字显示省略号
+@mixin ellipsisMultiline($number: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $number;
+}

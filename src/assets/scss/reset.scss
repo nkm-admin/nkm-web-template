@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: .5s;
+
+  &:active,
+  &:hover {
+    text-decoration: none;
+    color: var(--color-theme);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  font: $font-size-base "system-ui","PingFangSC-Regular","Microsoft Yahei";
+  color: var(--color-text);
+}
