@@ -1,9 +1,7 @@
-# nkm后台管理系统初始化模版-web端
+# nkm前端初始化模版，不带权限控制
 
-* 测试账号：testAdmin/nkm-123456
 * 脚手架采取3.x，项目已配置vue-router + vuex + eslint + axios + element-ui + sass(scss)
 * store、router已采取自动注入
-* 服务端仓库地址：[https://github.com/nkm-admin/nkm-server-ts](https://github.com/nkm-admin/nkm-server-ts)
 
 ## 安装项目依赖
 ```
@@ -35,7 +33,7 @@ npm run lint
 
 ## 目录文件说明
 ```
-nkm-admin-client
+nkm-web-template
 ├─.browserslistrc
 ├─.editorconfig
 ├─.env.development // 开发环境变量
@@ -72,51 +70,12 @@ nkm-admin-client
 |  ├─request
 |  |    └index.js
 |  ├─pages
-|  |   ├─main
-|  |   |  ├─index.vue
-|  |   |  ├─components
-|  |   |  |     ├─BreadCrumb.vue
-|  |   |  |     ├─Menu
-|  |   |  |     |  ├─index.vue
-|  |   |  |     |  └menuItem.vue
-|  |   ├─login // 登录页
-|  |   |   ├─index.vue
-|  |   |   └login.router.js
 |  |   ├─error // 系统错误页面
 |  |   |   ├─error.router.js
 |  |   |   ├─error.scss
 |  |   |   ├─forbidden.vue
 |  |   |   └notFound.vue
 |  ├─modules // 所有业务页面，具体可参考系统管理部分
-|  |    ├─system // 系统管理
-|  |    |   ├─system.router.js
-|  |    |   ├─user // 用户管理
-|  |    |   |  ├─.router.js
-|  |    |   |  ├─index.vue
-|  |    |   |  ├─user.store.js
-|  |    |   |  ├─components
-|  |    |   |  |     └registered.vue
-|  |    |   ├─role // 角色管理
-|  |    |   |  ├─.router.js
-|  |    |   |  ├─index.vue
-|  |    |   |  └role.store.js
-|  |    |   ├─resource // 资源管理
-|  |    |   |    ├─.router.js
-|  |    |   |    ├─index.vue
-|  |    |   |    ├─resource.store.js
-|  |    |   |    ├─components
-|  |    |   |    |     └edit.vue
-|  |    |   ├─dictionary  // 数据字典
-|  |    |   |     ├─.router.js
-|  |    |   |     ├─dictionary.store.js
-|  |    |   |     └index.vue
-|  |    ├─personalCenter  // 个人中心
-|  |    |       ├─index.vue
-|  |    |       ├─personal.router.js
-|  |    |       ├─personal.store.js
-|  |    |       ├─components
-|  |    |       |     ├─information.vue
-|  |    |       |     └security.vue
 |  |    ├─dashboard  // 仪表盘
 |  |    |     ├─dashboard.router.js
 |  |    |     └index.vue
@@ -154,12 +113,6 @@ nkm-admin-client
 |  |   ├─images
 |  ├─api // 项目所有请求目录
 |  |  ├─index.js
-|  |  ├─personalCenter.js
-|  |  ├─system
-|  |  |   ├─dictionary.js
-|  |  |   ├─resource.js
-|  |  |   ├─role.js
-|  |  |   └user.js
 ├─public
 |   ├─favicon.ico
 |   └index.html
